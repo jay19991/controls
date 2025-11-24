@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Amasis+MT+Pro:wght@400;700&display=swap');
+
+body {
+  font-family: 'Amasis MT Pro Light', serif;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.title {
+  font-family: 'Algerian', serif;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+  font-family: 'Amasis MT Pro', serif;
+  margin-left: 15px;
+  font-weight: 500;
+}
+
+/* Dark Mode */
+body.dark { background: #1e1e1e; color: #e8e8e8; }
+
+/* Header Row */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.header-row h2 { margin: 0; font-size: 1.5rem; }
+
+.dark-btn {
+  padding: 5px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  background: #444;
+  color: white;
+  cursor: pointer;
+}
+.dark-btn:hover { background: #555; }
+
+/* Filter + Search Row */
+.filter-search-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+.filter-search-row input,
+.filter-search-row select {
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  width: 200px;
+}
+body.dark .filter-search-row input,
+body.dark .filter-search-row select {
+  background: #2b2b2b;
+  color: #e8e8e8;
+  border-color: #555;
+}
+
+/* Form Section */
+.form-container {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+body.dark .form-container { background: #2b2b2b; }
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+.form-field { display: flex; flex-direction: column; }
+.form-field label { font-weight: 600; margin-bottom: 4px; font-size: 14px; }
+.form-grid input { padding: 10px; border-radius: 6px; border: 1px solid #bbb; font-size: 14px; }
+
+/* Uniform Buttons */
+.uniform-btn {
+  background: #2f3542;
+  color: white;
+  padding: 12px 0;
+  width: 160px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  text-align: center;
+}
+.uniform-btn:hover { background: #404656; }
+button.danger.uniform-btn { background: #e74c3c; }
+button.danger.uniform-btn:hover { background: #c0392b; }
+.import-btn.uniform-btn { display: inline-block; line-height: normal; }
+
+/* Export Buttons Row */
+.export-buttons { display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; }
+
+/* Pagination Buttons */
+.small-btn { padding: 6px 10px; font-size: 13px; }
+
+/* Table */
+.table-container {
+  overflow-x: auto;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+body.dark .table-container { background: #2b2b2b; }
+
+table { width: 100%; border-collapse: collapse; min-width: 1100px; }
+th { background: #2f3542; color: white; padding: 10px; text-align: left; }
+td { padding: 10px; border-bottom: 1px solid #ccc; }
+body.dark td { border-color: #555; }
+tr:hover td { background: #f1f2f6; }
+body.dark tr:hover td { background: #333; }
+
+/* Action buttons inside table */
+.action-btn { padding: 6px 10px; border-radius: 6px; cursor: pointer; margin-right: 5px; font-size: 13px; }
+.edit-btn { background: #1e90ff; color: white; }
+.save-btn { background: #00b894; color: white; }
+.delete-btn { background: #e74c3c; color: white; }
+
+/* Color coding for Access Type */
+td[data-type="Jace"] { background: #d6e4ff !important; }
+td[data-type="Sup"] { background: #d4f8d4 !important; }
+td[data-type="Other"] { background: #ffe6cc !important; }
+
+/* Mobile */
+@media (max-width: 600px) {
+  th, td { padding: 8px; font-size: 13px; }
+  #searchInput { font-size: 14px; }
+  button { font-size: 14px; }
+}
