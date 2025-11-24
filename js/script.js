@@ -69,6 +69,10 @@ document.addEventListener('DOMContentLoaded', function () {
       alert('You do not have permission to view this page, Passphrase required to view this page.');
       window.location.href = 'ems-sites1.html';
     }
+	if (path.includes('table.html') && access !== 'full') {
+      alert('You do not have permission to view this page, Passphrase required to view this page.');
+      window.location.href = 'ems-sites1.html';
+    }
   }
 });
 
